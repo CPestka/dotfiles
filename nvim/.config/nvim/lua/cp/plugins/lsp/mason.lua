@@ -25,6 +25,11 @@ return {
             "clangd",
 			"html",
 			"lua_ls",
+			"asm_lsp",
+			"bashls",
+			"cmake",
+			"markdown_oxide",
+			"texlab",
         },
         automatic_installation = true, -- not the same as ensure_installed
       })
@@ -32,7 +37,9 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
             "clang-format",
+            "asmfmt",
             "bibtex-tidy",
+            "mdformat",
         },
         automatic_installation = true, -- not the same as ensure_installed
       })

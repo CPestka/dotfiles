@@ -115,5 +115,40 @@ return {
                 },
             },
         })
+
+        lspconfig["asm_lsp"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "asm-lsp" },
+            filetypes = { "asm", "s" },
+        })
+
+        lspconfig["bashls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "bash-language-server" },
+            filetypes = { "sh" },
+        })
+
+        lspconfig["cmake"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "cmake-language-server" },
+            filetypes = { "cmake", "CMAKELISTS.txt" },
+        })
+
+        lspconfig["markdown_oxide"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "markdown-oxide" },
+            filetypes = { "md" },
+        })
+
+        lspconfig["texlab"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "texlab" },
+            filetypes = { "tex" },
+        })
     end,
 }
