@@ -12,11 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-    { 
+    {
         { import = "cp.plugins" },
         { import = "cp.plugins.lsp" }
     },
-    { 
+    {
         install = { colorscheme = {"tokionight"} },
         checker = {
             enabled = true,
