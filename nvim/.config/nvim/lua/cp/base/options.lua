@@ -4,7 +4,7 @@ opt.relativenumber = true
 opt.number = true -- shows absolute line number
 opt.wrap = false
 opt.cursorline = true
-opt.colorcolumn = "120"
+opt.colorcolumn = "80,120"
 
 opt.tabstop = 4 -- 4 spaces for tabs
 opt.shiftwidth = 4 -- 4 spaces for indent width
