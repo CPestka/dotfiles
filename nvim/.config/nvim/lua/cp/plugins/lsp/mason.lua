@@ -8,7 +8,7 @@ return {
       local mason = require("mason")
       local mason_lspconfig = require("mason-lspconfig")
       local mason_tool_installer = require("mason-tool-installer")
-  
+
       mason.setup({
         ui = {
           icons = {
@@ -18,7 +18,7 @@ return {
           },
         },
       })
-  
+
       mason_lspconfig.setup({
         ensure_installed = {
             "zls",
@@ -31,9 +31,9 @@ return {
 			"markdown_oxide",
 			"texlab",
         },
-        automatic_installation = true, -- not the same as ensure_installed
+        automatic_installation = true,
       })
-  
+
       mason_tool_installer.setup({
         ensure_installed = {
             "clang-format",
@@ -41,7 +41,7 @@ return {
             "bibtex-tidy",
             "mdformat",
         },
-        automatic_installation = true, -- not the same as ensure_installed
+        automatic_installation = true,
       })
     end,
   }
