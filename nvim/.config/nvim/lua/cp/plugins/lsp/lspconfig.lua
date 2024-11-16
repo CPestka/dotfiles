@@ -38,9 +38,6 @@ return {
             opts.desc = "Show LSP type definitions"
             keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
-            opts.desc = "See available code actions"
-            keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-
             opts.desc = "Smart rename"
             keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
@@ -72,6 +69,10 @@ return {
             filetypes = { "zig", "zir" },
             root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
             single_file_support = true,
+			-- settings = {
+			-- 	zig_exe_path = "~/software/zig/zig",
+			-- 	zig_lib_path = "~/software/zig/lib/zig"
+			-- },
         })
 
         lspconfig.clangd.setup({
