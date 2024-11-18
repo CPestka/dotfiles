@@ -24,6 +24,7 @@ return {
             "zig",
             "c",
             "cpp",
+			"diff",
 
             "markdown",
             "markdown_inline",

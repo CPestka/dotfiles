@@ -25,8 +25,11 @@ return {
       telescope.load_extension("fzf")
 
       local keymap = vim.keymap
-      keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-      keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-      keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+      local builtin = require 'telescope.builtin'
+      keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
+      keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Find string in cwd" })
+      keymap.set("n", "<leader>f*", builtin.grep_string, { desc = "Find string under cursor in cwd" })
+      keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
+      keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Find Help' })
     end,
   }

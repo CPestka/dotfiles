@@ -7,4 +7,5 @@ keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move Up Half Page" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
-keymap.set("n", "<leader>ft", ":tag <cword>", {desc = "Follow tag under cursor" })
+keymap.set("n", "<leader>ft", ":tag <cword><CR>", {desc = "Follow tag under cursor" })
+keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

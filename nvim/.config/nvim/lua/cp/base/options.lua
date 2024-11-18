@@ -28,3 +28,6 @@ opt.swapfile = false
 
 opt.spelllang = { 'en' }
 opt.spell = true
+
+vim.opt.list = true
+vim.opt.listchars = { trail = "*", tab = "<->" }
