@@ -67,13 +67,6 @@ return {
             single_file_support = true,
         })
 
-        lspconfig["bibtex-tidy"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            cmd = { "bibtex-tidy" },
-            filetypes = { "bib" },
-        })
-
         lspconfig.html.setup({
             capabilities = capabilities,
             on_attach = on_attach,

@@ -1,47 +1,46 @@
 return {
-    "williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
-    config = function()
-      local mason = require("mason")
-      local mason_lspconfig = require("mason-lspconfig")
-      local mason_tool_installer = require("mason-tool-installer")
+	"williamboman/mason.nvim",
+	dependencies = {
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	},
+	config = function()
+		local mason = require("mason")
+		local mason_lspconfig = require("mason-lspconfig")
+		local mason_tool_installer = require("mason-tool-installer")
 
-      mason.setup({
-        ui = {
-          icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗",
-          },
-        },
-      })
+		mason.setup({
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+		})
 
-      mason_lspconfig.setup({
-        ensure_installed = {
-            "zls",
-            "clangd",
-			"html",
-			"lua_ls",
-			"asm_lsp",
-			"bashls",
-			"cmake",
-			"markdown_oxide",
-			"texlab",
-        },
-        automatic_installation = true,
-      })
+		mason_lspconfig.setup({
+			ensure_installed = {
+				"zls",
+				"clangd",
+				"html",
+				"lua_ls",
+				"asm_lsp",
+				"bashls",
+				"cmake",
+				"markdown_oxide",
+				"texlab",
+			},
+			automatic_installation = true,
+		})
 
-      mason_tool_installer.setup({
-        ensure_installed = {
-            "clang-format",
-            "asmfmt",
-            "bibtex-tidy",
-            "mdformat",
-        },
-        automatic_installation = true,
-      })
-    end,
-  }
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"clang-format",
+				"asmfmt",
+				"mdformat",
+			},
+			automatic_installation = true,
+		})
+	end,
+}
