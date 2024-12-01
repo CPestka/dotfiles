@@ -23,10 +23,7 @@ return {
 			ensure_installed = {
 				"zls",
 				"clangd",
-				"html",
 				"lua_ls",
-				"asm_lsp",
-				"bashls",
 				"cmake",
 				"markdown_oxide",
 				"texlab",

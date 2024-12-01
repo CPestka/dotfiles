@@ -67,11 +67,6 @@ return {
             single_file_support = true,
         })
 
-        lspconfig.html.setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
-
         lspconfig["lua_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
@@ -90,20 +85,6 @@ return {
                     },
                 },
             },
-        })
-
-        lspconfig["asm_lsp"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            cmd = { "asm-lsp" },
-            filetypes = { "asm", "s" },
-        })
-
-        lspconfig["bashls"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            cmd = { "bash-language-server" },
-            filetypes = { "sh" },
         })
 
         lspconfig["cmake"].setup({
