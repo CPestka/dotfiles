@@ -36,6 +36,7 @@ return {
 				"clang-format",
 				"asmfmt",
 				"mdformat",
+				"codelldb",
 			},
 			automatic_installation = true,
 		})
