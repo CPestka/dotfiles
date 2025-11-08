@@ -21,7 +21,7 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
-				-- "zls",
+				"zls",
 				"clangd",
 				"lua_ls",
 				"cmake",
