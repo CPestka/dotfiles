@@ -1,12 +1,13 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
 	dependencies = {
-		"hrsh7th/cmp-buffer", -- source for text in buffer
-		"hrsh7th/cmp-path", -- source for file system paths
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-nvim-lsp"
 	},
 	config = function()
 		local cmp = require("cmp")
+		local cap = require('cmp_nvim_lsp').default_capabilities()
 
 		cmp.setup({
 			completion = {
@@ -23,6 +24,25 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "path" },
 			}),
+		})
+
+		vim.lsp.config("zls", {
+			capabilities = cap
+		})
+		vim.lsp.config("clangd", {
+			capabilities = cap
+		})
+		vim.lsp.config("luals", {
+			capabilities = cap
+		})
+		vim.lsp.config("cmake", {
+			capabilities = cap
+		})
+		vim.lsp.config("markdown_oxide", {
+			capabilities = cap
+		})
+		vim.lsp.config("texlab", {
+			capabilities = cap
 		})
 	end,
 }
