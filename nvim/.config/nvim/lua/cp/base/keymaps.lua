@@ -18,4 +18,4 @@ km.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", opt)
 km.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<CR>", opt)
 
 km.set("n", "<leader>db", "<cmd>Telescope diagnostics bufnr=0<CR>", opt)
-km.set("n", "<leader>dd", "<cmd>Telescope diagnostics", opt)
+km.set("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", opt)
