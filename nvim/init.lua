@@ -10,21 +10,21 @@ opt.relativenumber = true
 opt.wrap = false
 opt.tabstop = 4
 opt.swapfile = true
-opt.expandtab = false -- expand tab to spaces
-opt.autoindent = true -- use indent from current line when o or O
+opt.expandtab = false
+opt.autoindent = true
 opt.cursorline = true
 opt.colorcolumn = "80,120"
 opt.scrolloff = 20
 opt.termguicolors = true
-opt.background = "dark" -- if available use dark version of colorscheme
-opt.signcolumn = "yes"  -- always show sign column so that text doesn't jiggle
+opt.background = "dark"
+opt.signcolumn = "yes"
 opt.winborder = "rounded"
 opt.ignorecase = true
-opt.smartcase = true -- case-sensitive on mixed case search
+opt.smartcase = true
 opt.incsearch = true
 opt.spelllang = { 'en' }
 opt.spell = true
-opt.splitright = true -- vertical splits to the right
+opt.splitright = true
 opt.list = true       -- activate list mode i.e. show "suspicious formatting chars" e.g. trailing spaces, tabs, etc. etc.
 opt.listchars = { trail = "*", tab = "<->" }
 
@@ -44,14 +44,12 @@ pck.add({
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/numToStr/Comment.nvim" },
-	{ src = "https://github.com/akinsho/bufferline.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim", },
 	{ src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim", }, -- Currently kinda broken, one needs to go to the dir with this and call cmake manually (:echo &rtp -> somewhere there in pack dir)
 	{ src = "https://github.com/nvim-telescope/telescope.nvim", },
 })
 
 require "Comment".setup()
-require "bufferline".setup()
 require "gitsigns".setup()
 require "lualine".setup({})
 require "todo-comments".setup()
