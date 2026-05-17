@@ -14,7 +14,7 @@ opt.expandtab = false
 opt.autoindent = true
 opt.cursorline = true
 opt.colorcolumn = "80,120"
-opt.scrolloff = 20
+opt.scrolloff = 12
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -25,7 +25,7 @@ opt.incsearch = true
 opt.spelllang = { 'en' }
 opt.spell = true
 opt.splitright = true
-opt.list = true       -- activate list mode i.e. show "suspicious formatting chars" e.g. trailing spaces, tabs, etc. etc.
+opt.list = true -- activate list mode i.e. show "suspicious formatting chars" e.g. trailing spaces, tabs, etc. etc.
 opt.listchars = { trail = "*", tab = "<->" }
 
 global.mapleader = " "
