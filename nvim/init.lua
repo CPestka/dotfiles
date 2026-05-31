@@ -9,12 +9,12 @@ opt.number = true
 opt.relativenumber = true
 opt.wrap = false
 opt.tabstop = 4
-opt.swapfile = true
+opt.swapfile = false
 opt.expandtab = false
 opt.autoindent = true
 opt.cursorline = true
 opt.colorcolumn = "80,120"
-opt.scrolloff = 12
+opt.scrolloff = 10
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -26,6 +26,7 @@ opt.spelllang = { 'en' }
 opt.spell = true
 opt.splitright = true
 opt.list = true -- activate list mode i.e. show "suspicious formatting chars" e.g. trailing spaces, tabs, etc. etc.
+opt.completeopt = "menuone,noselect,fuzzy,nosort"
 opt.listchars = { trail = "*", tab = "<->" }
 
 global.mapleader = " "
